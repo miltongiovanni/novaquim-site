@@ -1,0 +1,63 @@
+@font-face {
+    font-family: BankGthd;
+    src: url(BankGthd.ttf);
+}
+
+#slogan {
+    font-family: BankGthd;
+    font-size: 26px;
+    margin-left: 140px;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#top-header {
+    background-color: #07009b;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    color: #ffffff;
+}
+
+#top-header .nav-link {
+    color: #ffffff;
+}
+
+.navbar .megamenu {
+    padding: 1rem;
+}
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+
+    .navbar .has-megamenu {
+        position: static !important;
+    }
+
+    .navbar .megamenu {
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 0;
+    }
+
+}
+
+/* ============ desktop view .end// ============ */
+
+
+/* ============ mobile view ============ */
+@media (max-width: 991px) {
+    .navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse {
+        overflow-y: auto;
+        max-height: 90vh;
+        margin-top: 10px;
+    }
+}
+
+/* ============ mobile view .end// ============ */
