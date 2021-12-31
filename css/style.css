@@ -1,19 +1,26 @@
 @font-face {
-    font-family: BankGthd;
-    src: url(BankGthd.ttf);
+    font-family: BankGothic;
+    src: url(BankGothic.ttf);
 }
 
 #slogan {
-    font-family: BankGthd;
-    font-size: 26px;
-    margin-left: 140px;
+    font-family: BankGothic;
+    font-size: 24px;
+    margin: auto;
 }
 
-
+.bg-dark-blue {
+    --bs-bg-opacity: 1;
+    background-color: #07009b !important;
+}
 body {
     font-family: 'Open Sans', sans-serif;
 }
-
+#logo{
+    height: 100px;
+    width: auto;
+    transition: 1s;
+}
 #top-header {
     background-color: #07009b;
     --bs-gutter-x: 1.5rem;
@@ -57,6 +64,15 @@ body {
         overflow-y: auto;
         max-height: 90vh;
         margin-top: 10px;
+    }
+    #slogan {
+        font-size: 14px;
+    }
+}
+/* ============ mobile view ============ */
+@media (max-width: 1200px) {
+    #slogan {
+        font-size: 18px;
     }
 }
 
