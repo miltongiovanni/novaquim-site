@@ -1,3 +1,14 @@
+<?php
+$sql = "SELECT id, name, slug FROM category";
+$stmt = $con->prepare($sql);
+$stmt->execute();
+$categorias = [];
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $categorias[]=$row;
+}
+?>
+
+
 <!-- ============= COMPONENT ============== -->
 <div class="row">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark-blue" id="navbar">
@@ -14,58 +25,23 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Productos  </a>
                         <div class="dropdown-menu megamenu" role="menu">
                             <div class="row g-3">
-                                <div class="col-lg-3 col-6">
-                                    <div class="col-megamenu">
-                                        <h6 class="title">Title Menu One</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                        </ul>
-                                    </div>  <!-- col-megamenu.// -->
-                                </div><!-- end col-3 -->
-                                <div class="col-lg-3 col-6">
-                                    <div class="col-megamenu">
-                                        <h6 class="title">Title Menu Two</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                        </ul>
-                                    </div>  <!-- col-megamenu.// -->
-                                </div><!-- end col-3 -->
-                                <div class="col-lg-3 col-6">
-                                    <div class="col-megamenu">
-                                        <h6 class="title">Title Menu Three</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                        </ul>
-                                    </div>  <!-- col-megamenu.// -->
-                                </div>
-                                <div class="col-lg-3 col-6">
-                                    <div class="col-megamenu">
-                                        <h6 class="title">Title Menu Four</h6>
-                                        <ul class="list-unstyled">
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                            <li><a href="#">Custom Menu</a></li>
-                                        </ul>
-                                    </div>  <!-- col-megamenu.// -->
-                                </div><!-- end col-3 -->
+                                <?php
+                                foreach ($categorias as $categoria):
+                                ?>
+                                <div class="col-megamenu col-md-2">
+                                    <h6 class="title"><a class="nav-link" href="<?=APP_URL.$categoria['slug']?>"><?=$categoria['name']?></a></h6>
+                                    <ul class="list-unstyled">
+                                        <li><a class="dropdown-item" href="#">Custom Menu</a></li>
+                                        <li><a class="dropdown-item" href="#">Custom Menu</a></li>
+                                        <li><a class="dropdown-item" href="#">Custom Menu</a></li>
+                                        <li><a class="dropdown-item" href="#">Custom Menu</a></li>
+                                        <li><a class="dropdown-item" href="#">Custom Menu</a></li>
+                                        <li><a class="dropdown-item" href="#">Custom Menu</a></li>
+                                    </ul>
+                                </div>  <!-- col-megamenu.// -->
+                                <?php
+                                endforeach;
+                                ?>
                             </div><!-- end row -->
                         </div> <!-- dropdown-mega-menu.// -->
                     </li>
