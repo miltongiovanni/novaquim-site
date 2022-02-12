@@ -1,0 +1,6 @@
+## REWRITE DEFAULTS
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^productos/(.*)/(.*)$ producto.php?categoria=$1&producto=$2 [L]
+RewriteRule ^productos/(.*)$ categoria.php?categoria=$1 [L]

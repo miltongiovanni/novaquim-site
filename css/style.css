@@ -2,15 +2,127 @@
     font-family: BankGothic;
     src: url(BankGothic.ttf);
 }
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.et_pb_animation_left.et-animated {
+    opacity: 1;
+    -webkit-animation: fadeLeft 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-animation: fadeLeft 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    -o-animation: fadeLeft 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    animation: fadeLeft 2s 1 cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.et_pb_animation_right.et-animated {
+    opacity: 1;
+    -webkit-animation: fadeRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-animation: fadeRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    -o-animation: fadeRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    animation: fadeRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.et_pb_animation_top.et-animated {
+    opacity: 1;
+    -webkit-animation: fadeTop 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-animation: fadeTop 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    -o-animation: fadeTop 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    animation: fadeTop 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.et_pb_animation_bottom.et-animated {
+    opacity: 1;
+    -webkit-animation: fadeBottom 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-animation: fadeBottom 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    -o-animation: fadeBottom 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    animation: fadeBottom 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.et_pb_animation_fade_in.et-animated {
+    opacity: 1;
+    -webkit-animation: fadeIn 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-animation: fadeIn 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    -o-animation: fadeIn 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+    animation: fadeIn 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+}
 
 body {
     font-family: 'Open Sans', sans-serif;
+    color: #666;
 }
 
 .bg-dark-blue {
     --bs-bg-opacity: 1;
     background-color: #030353 !important;
+}
+
+#carouselSection{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+.categoria-list .nav-link{
+    font-size: 12px;
+    background-color: #f2f2f2;
+    color: #666;
+    border-radius: 5px;
+}
+.categoria-list .active{
+    font-weight: bold;
+}
+.categoria-list .nav-link:hover{
+    background-color: #e1e1e1;
 }
 
 .dropdown-item {
@@ -40,7 +152,9 @@ body {
     pointer-events: none;
     background-color: transparent;
 }
-
+.entry-title{
+    color: #030353;
+}
 /* Show the dropdown menu on hover */
 .has-megamenu:hover .dropdown-menu {
     display: block;
@@ -52,17 +166,31 @@ body {
     transition: 1s;
 }
 
+#main-footer{
+    background-color: #030353  ;
+    color: white;
+}
+
+.megamenu .col-megamenu .nav-link{
+    padding: .15rem 0.5rem;
+}
 .navbar .megamenu {
     padding: 1rem;
     background-color: #030353  ;
 }
 
+
 #slogan {
-    font-family: BankGothic;
+    font-family: BankGothic, sans-serif;
     font-size: 24px;
     margin: auto;
 }
-
+.social-logo{
+    height: 24px;
+    width: auto;
+    margin-right: 10px;
+    vertical-align: text-top;
+}
 #top-header {
     background-color: #030353  ;
     --bs-gutter-x: 1.5rem;
