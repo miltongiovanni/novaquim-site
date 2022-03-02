@@ -95,6 +95,15 @@
     animation: fadeIn 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
 }
 
+.banner-info{
+    text-shadow:0 1px 3px rgba(0, 0, 0, 0.3);
+    border-top-left-radius:3px;
+    border-top-right-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 30%;
+    margin: auto;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     color: #666;
@@ -159,7 +168,12 @@ body {
 .has-megamenu:hover .dropdown-menu {
     display: block;
 }
-
+.image-front{
+    width: 30%;
+    position: absolute;
+    top:20%;
+    left: 20%;
+}
 #logo {
     height: 100px;
     width: auto;

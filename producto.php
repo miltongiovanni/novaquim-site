@@ -24,7 +24,7 @@ $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<?= $producto['meta_description'] ?>"/>
-    <link rel="icon" href="img/favicon.ico" type="image/ico" sizes="16x16">
+    <link rel="icon" href="/img/favicon.ico" type="image/ico" sizes="16x16">
     <title><?= $producto['meta_title'] ?> | Industrias Novaquim S.A.S. Productos de aseo a la medida de sus
         necesidades</title>
     <?php include('inc/assets.php') ?>
@@ -49,7 +49,7 @@ $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                          src="<?= ADMIN_URL . 'uploads/images/' . $producto['image_1'] ?>"
                                          alt="<?= $producto['title'] ?>">
                                 </div>
-                                
+
                                 <?php
                                 if (isset($producto['image_2']) && $producto['image_2'] != ''):
                                     ?>
@@ -112,4 +112,3 @@ $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </body>
 
 </html>
->

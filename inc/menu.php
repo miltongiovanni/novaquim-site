@@ -25,7 +25,7 @@ foreach ($categoriasMenu as $key => $categoria) {
             <div class="collapse navbar-collapse " id="main_nav">
                 <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
                     <li class="nav-item active"><a class="nav-link" href="<?= APP_URL ?>">Inicio </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"> Quienes somos </a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= APP_URL ?>quienes-somos"> Quiénes somos </a></li>
                     <li class="nav-item dropdown has-megamenu">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Productos </a>
                         <div class="dropdown-menu megamenu" role="menu">
@@ -39,16 +39,6 @@ foreach ($categoriasMenu as $key => $categoria) {
                                         </h6>
                                         <ul class="list-unstyled">
                                             <?php
-                                            if (count($categoria['productos']) == 0):
-                                                ?>
-                                                <li class="ps-2"><a class="nav-link" href="#">Custom Menu</a></li>
-                                                <li class="ps-2"><a class="nav-link" href="#">Custom Menu</a></li>
-                                                <li class="ps-2"><a class="nav-link" href="#">Custom Menu</a></li>
-                                                <li class="ps-2"><a class="nav-link" href="#">Custom Menu</a></li>
-                                                <li class="ps-2"><a class="nav-link" href="#">Custom Menu</a></li>
-                                                <li class="ps-2"><a class="nav-link" href="#">Custom Menu</a></li>
-                                            <?php
-                                            else:
                                                 foreach ($categoria['productos'] as $productoMenu):
                                                     ?>
                                                     <li class="ps-2"><a class="nav-link"
@@ -56,7 +46,6 @@ foreach ($categoriasMenu as $key => $categoria) {
                                                     </li>
                                                 <?php
                                                 endforeach;
-                                            endif;
                                             ?>
                                         </ul>
                                     </div>  <!-- col-megamenu.// -->
