@@ -168,6 +168,9 @@ body {
 .has-megamenu:hover .dropdown-menu {
     display: block;
 }
+.img-prod{
+    max-height: 300px;
+}
 .image-front{
     width: 30%;
     position: absolute;

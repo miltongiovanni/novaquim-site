@@ -45,7 +45,7 @@ $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="row pt-4">
                             <div class="col-sm-4 text-center">
                                 <div class="et_pb_animation_left et-animated mb-4">
-                                    <img class="img-fluid"
+                                    <img class="img-fluid img-prod"
                                          src="<?= ADMIN_URL . 'uploads/images/' . $producto['image_1'] ?>"
                                          alt="<?= $producto['title'] ?>">
                                 </div>
@@ -54,7 +54,7 @@ $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 if (isset($producto['image_2']) && $producto['image_2'] != ''):
                                     ?>
                                 <div class="et_pb_animation_left et-animated mb-4">
-                                    <img class="img-fluid"
+                                    <img class="img-fluid img-prod"
                                          src="<?= ADMIN_URL . 'uploads/images/' . $producto['image_2'] ?>"
                                          alt="<?= $producto['title'] ?>">
                                 </div>
@@ -67,7 +67,7 @@ $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 if (isset($producto['image_3']) && $producto['image_3'] != ''):
                                     ?>
                                 <div class="et_pb_animation_left et-animated mb-4">
-                                    <img class="img-fluid"
+                                    <img class="img-fluid img-prod"
                                          src="<?= ADMIN_URL . 'uploads/images/' . $producto['image_3'] ?>"
                                          alt="<?= $producto['title'] ?>">
                                 </div>
@@ -83,7 +83,7 @@ $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                     </div>
                 </article>
-                <aside class="col-sm-2">
+                <aside class="col-sm-2 px-0">
                     <h5>Categorías</h5>
                     <ul class="nav flex-column categoria-list">
                         <?php
