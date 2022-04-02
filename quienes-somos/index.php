@@ -1,9 +1,5 @@
 <?php
 include_once('../inc/config_db.php');
-$sql = "SELECT id, title, subtitle, background_image, front_image FROM banner";
-$stmt = $con->prepare($sql);
-$stmt->execute();
-$banners = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>

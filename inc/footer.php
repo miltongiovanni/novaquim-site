@@ -25,10 +25,10 @@ $configuration = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
             </div>
             <div class="col-md-3">
                 <ul id="menu-menu-pie" class="nav flex-column">
-                    <li id="menu-item-581" class="nav-item"><a class="nav-link" href="https://novaquim.com/wp/">Inicio</a></li>
-                    <li id="menu-item-582" class="nav-item"><a class="nav-link" href="https://novaquim.com/wp/quienes-somos/">Quienes somos</a></li>
-                    <li id="menu-item-583" class="nav-item"><a class="nav-link" href="https://novaquim.com/wp/politica-de-privacidad/">Política de privacidad</a></li>
-                    <li id="menu-item-584" class="nav-item"><a class="nav-link" href="https://novaquim.com/wp/contacto/">Contacto</a></li>
+                    <li id="menu-item-581" class="nav-item"><a class="nav-link" href="<?= APP_URL?>">Inicio</a></li>
+                    <li id="menu-item-582" class="nav-item"><a class="nav-link" href="<?= APP_URL?>quienes-somos/">Quienes somos</a></li>
+                    <li id="menu-item-583" class="nav-item"><a class="nav-link" href="<?= APP_URL?>politica-de-privacidad/">Política de privacidad</a></li>
+                    <li id="menu-item-584" class="nav-item"><a class="nav-link" href="<?= APP_URL?>contacto/">Contacto</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
