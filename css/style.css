@@ -100,7 +100,7 @@
     border-top-left-radius:3px;
     border-top-right-radius: 3px;
     background-color: rgba(0, 0, 0, 0.3);
-    width: 30%;
+    width: 50%;
     margin: auto;
 }
 
@@ -120,6 +120,23 @@ body {
     margin-top: calc(-1 * var(--bs-gutter-y));
     margin-right: calc(-.5 * var(--bs-gutter-x));
     margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 40%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 0.8em;
+}
+
+.carousel-caption h5{
+    font-size: 1.25em;
+    line-height: 1;
 }
 .categoria-list .nav-link{
     font-size: 12px;
@@ -176,6 +193,11 @@ body {
     position: absolute;
     top:20%;
     left: 20%;
+    height: 50%;
+}
+.image-banner{
+    max-height: 100%;
+    width: auto;
 }
 #logo {
     height: 100px;
@@ -235,7 +257,20 @@ body {
         width: 100%;
         margin-top: 0;
     }
-
+    .carousel-caption {
+        right: 15%;
+        left: 15%;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 1em;
+    }
+    .carousel-caption h5{
+        font-size: 1.25em;
+        line-height: 1.2;
+    }
+    .banner-info{
+        width: 30%;
+    }
 }
 
 /* ============ desktop view .end// ============ */

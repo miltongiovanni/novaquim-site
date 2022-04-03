@@ -45,10 +45,10 @@ $banners = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <img src="<?= ADMIN_URL ?>uploads/images/<?= $banner['background_image'] ?>"
                              class="d-block w-100" alt="<?= $banner['title'] ?>">
                         <div class="et_pb_animation_left et-animated mb-4 image-front">
-                            <img class="img-fluid" src="<?= ADMIN_URL ?>uploads/images/<?= $banner['front_image'] ?>"
+                            <img class="image-banner" src="<?= ADMIN_URL ?>uploads/images/<?= $banner['front_image'] ?>"
                                  alt="<?= $banner['subtitle'] ?>">
                         </div>
-                        <div class="carousel-caption d-none d-md-block banner-info">
+                        <div class="carousel-caption banner-info">
                             <h5><?= $banner['title'] ?></h5>
                             <p><?= $banner['subtitle'] ?></p>
                         </div>
@@ -75,7 +75,7 @@ $banners = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <section>
         <div class="container">
 
-            <h5 class="text-center p-5">Industrias Novaquim S.A.S es una compañía con más de 20 años de experiencia en
+            <h5 class="text-center p-md-5 py-3">Industrias Novaquim S.A.S es una compañía con más de 20 años de experiencia en
                 el mercado reconocida por la fabricación de insumos líquidos de Higiene y Limpieza para el Mantenimiento
                 de pisos, Aseo doméstico, Limpieza general, Lavado de ropa, Limpieza de equipos, Limpieza automotriz y
                 Productos Industriales con los más altos estándares de calidad.</h5>
