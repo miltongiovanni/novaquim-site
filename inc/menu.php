@@ -55,9 +55,38 @@ foreach ($categoriasMenu as $key => $categoria) {
                             </div><!-- end row -->
                         </div> <!-- dropdown-mega-menu.// -->
                     </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Mercados </a>
+                        <div class="dropdown-menu megamenu" role="menu">
+                            <div class="row g-3">
+                                <?php
+                                foreach ($categoriasMenu as $categoria):
+                                    ?>
+                                    <div class="col-megamenu col-md-2">
+                                        <h6 class="title fw-bold"><a class="nav-link"
+                                                             href="<?= APP_URL .'productos/'. $categoria['slug'] ?>"><?= $categoria['name'] ?></a>
+                                        </h6>
+                                        <ul class="list-unstyled">
+                                            <?php
+                                                foreach ($categoria['productos'] as $productoMenu):
+                                                    ?>
+                                                    <li class="ps-2"><a class="nav-link"
+                                                           href="<?= APP_URL .'productos/'. $categoria['slug'] . '/' . $productoMenu['slug'] ?>"><?= $productoMenu['title'] ?></a>
+                                                    </li>
+                                                <?php
+                                                endforeach;
+                                            ?>
+                                        </ul>
+                                    </div>  <!-- col-megamenu.// -->
+                                <?php
+                                endforeach;
+                                ?>
+                            </div><!-- end row -->
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="#"> Servicios </a></li>
                     <li class="nav-item"><a class="nav-link" href="#"> Distribuidores </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"> Contacto </a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= APP_URL?>contacto/"> Contacto </a></li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

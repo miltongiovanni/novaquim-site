@@ -23,7 +23,9 @@ include_once('../inc/config_db.php');
     <section>
         <div class="container">
 
-            <div class="row my-5">
+            <div class="my-5">
+                <h3 class="text-center">POLÍTICA DE TRATAMIENTO PROTECCIÓN DE DATOS PERSONALES</h3>
+                <h3 class="text-center">INDUSTRIAS NOVAQUIM S.A.S.</h3>
                 <?php include '../inc/politica.php' ?>
             </div>
 

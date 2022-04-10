@@ -1,6 +1,6 @@
-// When the user scrolls the page, execute myFunction
+// When the user scrolls the page, execute sticky_bar
 window.onscroll = function () {
-    myFunction()
+    sticky_bar()
 };
 
 // Get the navbar
@@ -10,7 +10,7 @@ var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
+function sticky_bar() {
     if (window.scrollY >= sticky) {
         navbar.classList.add("fixed-top");
         document.getElementById("logo").style.height = "50px";
@@ -19,3 +19,5 @@ function myFunction() {
         document.getElementById("logo").style.height = "100px";
     }
 }
+
+

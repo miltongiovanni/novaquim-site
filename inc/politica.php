@@ -1,11 +1,8 @@
-
-<h3 style="text-align: center;">POLÍTICA DE TRATAMIENTO PROTECCIÓN DE DATOS PERSONALES</h3>
-<h3 style="text-align: center;">INDUSTRIAS NOVAQUIM S.A.S.</h3>
 <p><strong>Industrias Novaquim S.A.S., </strong>sociedad debidamente constituida conforme con las leyes
     colombianas, con domicilio en la ciudad de Bogotá D.C., dando cumplimiento al Decreto 1377 de 2013 y
     la normatividad vigente, informa la siguiente política aplicable a <strong>Industrias Novaquim
         S.A.S., </strong>para el tratamiento y protección de datos personales.</p>
-<h3>1. OBJETIVO</h3>
+<h4>1. OBJETIVO</h4>
 <p>El propósito de esta Política es garantizar el derecho constitucional colombiano del habeas data a
     los Titulares y darles a conocer a estos cuáles son los lineamientos, directrices, procesos y
     medidas que ha implementado <strong>Industrias Novaquim S.A.S., </strong><strong> </strong>para
@@ -15,7 +12,7 @@
     Personales. En este sentido se señalan a continuación cuáles son las finalidades del Tratamiento de
     Datos Personales; los derechos de los Titulares, y los procedimientos dispuestos por <strong>Industrias
         Novaquim S.A.S. </strong>para hacer efectivos los derechos.</p>
-<h3>2. ALCANCE</h3>
+<h4>2. ALCANCE</h4>
 <p>Ésta Política le aplicará a cualquier Tratamiento realizado por <strong>Industrias Novaquim
         S.A.S. </strong>o por cualquier Encargado por cuenta de aquel que realice el Tratamiento de
     Datos Personales, dentro del territorio colombiano.</p>
@@ -33,7 +30,7 @@
         S.A.S. </strong>haya suscrito un contrato de transmisión o transferencia de Datos Personales o
     entregue información para el desarrollo de actividades particulares, siempre que <strong>Industrias
         Novaquim S.A.S. </strong>actúe en calidad de Responsable.</p>
-<h3>3. DEFINICIONES</h3>
+<h4>3. DEFINICIONES</h4>
 <p>Los términos relevantes de esta política de Tratamiento de la información tendrán el significado que
     a continuación se le asigna, o aquel que precede al término entrecomillas dentro del paréntesis.</p>
 <p><strong>Autorizado:</strong> Son aquellas personas que pueden ejercer los derechos del Titular, tales
@@ -111,7 +108,7 @@
 <p><strong>Tratamiento:</strong> Es cualquier operación o conjunto de operaciones sobre Datos
     Personales, tales como la recolección, administración, almacenamiento, uso, circulación,
     transmisión, transferencia o supresión.</p>
-<h3>4. POLÍTICAS PARA TRATAMIENTO DE DATOS PERSONALES</h3>
+<h4>4. POLÍTICAS PARA TRATAMIENTO DE DATOS PERSONALES</h4>
 <p>Industrias Novaquim S.A.S. se compromete a llevar a cabo todo Tratamiento de Datos Personales de
     acuerdo con los siguientes principios que no sólo aplicarán a la información de carácter personal,
     sino también a la información que no quede cobijada directamente por el RGDPC.</p>
@@ -204,12 +201,13 @@
     <li>Teléfonos: (571) 203 94 84 – 202 29 12</li>
     <li>Dirección : Calle 35 C sur No. 26 F- 40, Bogotá</li>
 </ul>
-<h4>4.6. PROCEDIMIENTOS Y MECANISMOS DE PROTECCIÓN DE LOS DERECHOS</h4>
+<h5>4.6. PROCEDIMIENTOS Y MECANISMOS DE PROTECCIÓN DE LOS DERECHOS</h5>
 <p>A continuación se describirán los términos y la forma de presentar: (i) consultas; (ii) reclamos o
     (iii) solicitudes de supresión de los Datos Personales. Los Titulares podrán iniciar estos
     procedimientos para garantizar sus derechos al habeas data o informar de un incumplimiento que, a su
     juicio, consideren grave en relación con las obligaciones a cargo de <strong>Industrias Novaquim
-        S.A.S. </strong></p><h4>4.6.1. Consultas</h4>
+        S.A.S. </strong></p>
+<h5>4.6.1. Consultas</h5>
 <p>Los Titulares o los Autorizados podrán elevar consultas sobre cualquier información que repose en las
     Bases de Datos administradas por <strong>Industrias Novaquim S.A.S. </strong><strong> </strong> Una
     vez <strong>Industrias Novaquim S.A.S., </strong><strong> </strong>reciba la consulta adelantará los
@@ -246,10 +244,11 @@
         Titulares o Autorizados desean copia de ellas eventualmente.
     </li>
 </ol>
-<h4>4.6.2. Reclamos</h4>
+<h5>4.6.2. Reclamos</h5>
 <p>Los Titulares o Autorizados podrán elevar reclamos en relación con los Datos Personales a <strong>Industrias
         Novaquim S.A.S., </strong><strong> </strong>y sus Encargados. Tenga en cuenta que los reclamos
-    podrán enviarse por correo electrónico a la persona en <strong>Industrias Novaquim S.A.S., </strong><strong> </strong>encargada
+    podrán enviarse por correo electrónico a la persona en <strong>Industrias Novaquim
+        S.A.S., </strong><strong> </strong>encargada
     del tema de protección de Datos Personales. Tenga en cuenta que los reclamos podrán versar sobre:
 </p>
 <ul>
@@ -292,7 +291,7 @@
         superar los ocho (8) días hábiles siguientes al vencimiento del primer término.
     </li>
 </ol>
-<h4>4.6.3. Supresión</h4>
+<h5>4.6.3. Supresión</h5>
 <p>El Titular tiene el derecho, en todo momento, a solicitarle a <strong>Industrias Novaquim
         S.A.S., </strong><strong> </strong>la supresión de sus Datos Personales siempre que:</p>
 <ol>
@@ -324,7 +323,7 @@
     <li>Se vaya a realizar una acción en función del interés público.</li>
     <li>Se actúe para cumplir con una obligación legalmente adquirida por el Titular.</li>
 </ol>
-<h4>4.6.4. Vigencia de la Política</h4>
+<h5>4.6.4. Vigencia de la Política</h5>
 <p>La presente Política entra en vigencia el día 09 del mes Agosto de 2016. Cualquier modificación no
     sustantiva de la misma no será notificada directamente a los Titulares. Sin embargo, el cambio de la
     persona o área encargada del tema de protección de Datos Personales, la modificación material de las
