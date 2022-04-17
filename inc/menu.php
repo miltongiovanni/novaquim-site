@@ -10,6 +10,17 @@ foreach ($categoriasMenu as $key => $categoria) {
     $stmt2->execute(array('category_id' => $key));
     $categoriasMenu[$key]['productos'] = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 }
+$sql3 = "SELECT id, name, slug FROM mercado";
+$stmt3 = $con->prepare($sql3);
+$stmt3->execute();
+$mercadosMenu = $stmt3->fetchAll(PDO::FETCH_UNIQUE | PDO::FETCH_ASSOC);
+foreach ($mercadosMenu as $key => $mercado) {
+    $sql4 = "SELECT title, slug FROM product
+            WHERE mercado_id=:mercado_id";
+    $stmt4 = $con->prepare($sql4);
+    $stmt4->execute(array('mercado_id' => $key));
+    $mercadosMenu[$key]['productos'] = $stmt4->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
 
 
@@ -35,14 +46,14 @@ foreach ($categoriasMenu as $key => $categoria) {
                                     ?>
                                     <div class="col-megamenu col-md-2">
                                         <h6 class="title fw-bold"><a class="nav-link"
-                                                             href="<?= APP_URL .'productos/'. $categoria['slug'] ?>"><?= $categoria['name'] ?></a>
+                                                             href="<?= APP_URL .'productos/categoria/'. $categoria['slug'] ?>"><?= $categoria['name'] ?></a>
                                         </h6>
                                         <ul class="list-unstyled">
                                             <?php
                                                 foreach ($categoria['productos'] as $productoMenu):
                                                     ?>
                                                     <li class="ps-2"><a class="nav-link"
-                                                           href="<?= APP_URL .'productos/'. $categoria['slug'] . '/' . $productoMenu['slug'] ?>"><?= $productoMenu['title'] ?></a>
+                                                           href="<?= APP_URL .'productos/categoria/'. $categoria['slug'] . '/' . $productoMenu['slug'] ?>"><?= $productoMenu['title'] ?></a>
                                                     </li>
                                                 <?php
                                                 endforeach;
@@ -60,18 +71,18 @@ foreach ($categoriasMenu as $key => $categoria) {
                         <div class="dropdown-menu megamenu" role="menu">
                             <div class="row g-3">
                                 <?php
-                                foreach ($categoriasMenu as $categoria):
+                                foreach ($mercadosMenu as $mercado):
                                     ?>
                                     <div class="col-megamenu col-md-2">
                                         <h6 class="title fw-bold"><a class="nav-link"
-                                                             href="<?= APP_URL .'productos/'. $categoria['slug'] ?>"><?= $categoria['name'] ?></a>
+                                                             href="<?= APP_URL .'productos/mercado/'. $mercado['slug'] ?>"><?= $mercado['name'] ?></a>
                                         </h6>
                                         <ul class="list-unstyled">
                                             <?php
-                                                foreach ($categoria['productos'] as $productoMenu):
+                                                foreach ($mercado['productos'] as $productoMenu):
                                                     ?>
                                                     <li class="ps-2"><a class="nav-link"
-                                                           href="<?= APP_URL .'productos/'. $categoria['slug'] . '/' . $productoMenu['slug'] ?>"><?= $productoMenu['title'] ?></a>
+                                                           href="<?= APP_URL .'productos/mercado/'. $mercado['slug'] . '/' . $productoMenu['slug'] ?>"><?= $productoMenu['title'] ?></a>
                                                     </li>
                                                 <?php
                                                 endforeach;

@@ -1,17 +1,35 @@
 <?php
-$slugCategoria = $_GET['categoria'];
+$slugTipo = $_GET['tipo'];
+$slugDescripcion = $_GET['descripcion'];
+var_dump($slugTipo);
 include_once('inc/config_db.php');
-$sql = "SELECT p.id, p.category_id, p.title, p.meta_title, p.meta_description, p.image_1, p.description, p.slug, c.id, c.name, c.slug
+if ($slugTipo === 'categoria'){
+    $sql = "SELECT p.id, p.category_id, p.title, p.meta_title, p.meta_description, p.image_1, p.description, p.slug, c.id, c.name, c.slug
         FROM product p
         LEFT JOIN category c on c.id = p.category_id
         WHERE c.slug=:slugCategoria";
+}elseif ($slugTipo === 'mercado'){
+    $sql = "SELECT p.id, p.category_id, p.title, p.meta_title, p.meta_description, p.image_1, p.description, p.slug, m.id, m.name, m.slug
+        FROM product p
+        LEFT JOIN mercado m on m.id = p.mercado_id
+        WHERE m.slug=:slugCategoria";
+}
+
 $stmt = $con->prepare($sql);
-$stmt->execute(array('slugCategoria' => $slugCategoria));
+$stmt->execute(array('slugCategoria' => $slugDescripcion));
 $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$sql = "SELECT c.id, c.name, c.slug, count(p.id) productsNumber
+if ($slugTipo === 'categoria'){
+    $sql = "SELECT c.id, c.name, c.slug, count(p.id) productsNumber
         FROM category c
         LEFT JOIN product p on c.id = p.category_id
         GROUP BY c.id";
+}elseif ($slugTipo === 'mercado'){
+    $sql = "SELECT m.id, m.name, m.slug, count(p.id) productsNumber
+        FROM mercado m
+        LEFT JOIN product p on m.id = p.mercado_id
+        GROUP BY m.id";
+}
+
 $stmt = $con->prepare($sql);
 $stmt->execute();
 $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -91,14 +109,14 @@ $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                 </article>
                 <aside class="col-sm-2 px-0">
-                    <h5>Categorías</h5>
+                    <h5><?= $slugTipo === 'categoria' ? 'Categorías' : 'Mercados'?></h5>
                     <ul class="nav flex-column categoria-list">
                         <?php
                         foreach ($categoriaList as $categoria):
                             ?>
                             <li class="nav-item my-1">
-                                <a class="nav-link <?= $categoria['slug'] == $slugCategoria ? 'active' : '' ?>"
-                                   href="<?= APP_URL . 'productos/' . $categoria['slug'] ?>"><?= $categoria['name'] ?>
+                                <a class="nav-link <?= $categoria['slug'] == $slugDescripcion ? 'active' : '' ?>"
+                                   href="<?= APP_URL . 'productos/' . $slugTipo . '/' . $categoria['slug'] ?>"><?= $categoria['name'] ?>
                                     (<?= $categoria['productsNumber'] ?>)</a>
                             </li>
                         <?php

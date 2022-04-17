@@ -1,8 +1,8 @@
 <h3 class="mb-3">Contáctenos</h3>
 <form class="row g-3 needs-validation" novalidate>
     <div class="col-md-6">
-        <label for="nombre-contacto" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre-contacto" value="" required>
+        <label for="nombre_contacto" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre_contacto" value="" required>
         <div class="valid-feedback">
             Looks good!
         </div>
@@ -21,8 +21,8 @@
         </div>
     </div>
     <div class="col-md-6">
-        <label for="email-contacto" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="email-contacto" value="" required>
+        <label for="email_contacto" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="email_contacto" value="" required>
         <!--<div class="valid-feedback">
             Looks good!
         </div>-->
@@ -43,8 +43,8 @@
         <input type="text" class="form-control" id="celular">
     </div>
     <div class="col-md-6">
-        <label for="tipo-consulta" class="form-label">Tipo de consulta</label>
-        <select class="form-select" id="tipo-consulta" required>
+        <label for="tipo_consulta" class="form-label">Tipo de consulta</label>
+        <select class="form-select" id="tipo_consulta" required>
             <option value="" selected disabled>Seleccione el tipo de consulta</option>
             <option value="Solicitud de cotización">Solicitud de cotización</option>
             <option value="Soporte técnico">Soporte técnico</option>
@@ -65,8 +65,8 @@
 
     <div class="col-12">
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="acepta-politica" required>
-            <label class="form-check-label" for="acepta-politica">
+            <input class="form-check-input" type="checkbox" value="" id="acepta_politica" required>
+            <label class="form-check-label" for="acepta_politica">
                 Acepto la política de privacidad (Ver <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#politicaModal">Política de privacidad</a>)
             </label>
             <div class="invalid-feedback">
@@ -124,7 +124,7 @@
                             console.log(token);
                             console.log('here');
                             //Validacion
-                            if (form["nombre-contacto"].value === '') {
+                            /*if (form["nombre-contacto"].value === '') {
                                 //document.getElementById('contactoMessage').innerHTML = 'Este valor es requerido';
                                 event.preventDefault()
                                 event.stopPropagation()
@@ -133,7 +133,7 @@
                                 //document.getElementById('organizacionMessage').innerHTML = 'Este valor es requerido';
                                 event.preventDefault()
                                 event.stopPropagation()
-                            }
+                            }*/
                             form.classList.add('was-validated')
                         });
                     });

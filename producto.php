@@ -1,17 +1,26 @@
 <?php
+$slugTipo = $_GET['tipo'];
 $slugProducto = $_GET['producto'];
-$slugCategoria = $_GET['categoria'];
+$slugDescripcion = $_GET['descripcion'];
 include_once('inc/config_db.php');
-$sql = "SELECT title, meta_title, meta_description, image_1, image_2, image_3, description, slug
+$sql = "SELECT title, meta_title, meta_description, image_1, image_2, image_3, `description`, slug
         FROM product p
         WHERE slug =:slugProducto";
 $stmt = $con->prepare($sql);
 $stmt->execute(array('slugProducto' => $slugProducto));
 $producto = $stmt->fetch(PDO::FETCH_ASSOC);
-$sql = "SELECT c.id, c.name, c.slug, count(p.id) productsNumber
+if ($slugTipo === 'categoria') {
+    $sql = "SELECT c.id, c.name, c.slug, count(p.id) productsNumber
         FROM category c
         LEFT JOIN product p on c.id = p.category_id
         GROUP BY c.id";
+} elseif ($slugTipo === 'mercado') {
+    $sql = "SELECT m.id, m.name, m.slug, count(p.id) productsNumber
+        FROM mercado m
+        LEFT JOIN product p on m.id = p.mercado_id
+        GROUP BY m.id";
+}
+
 $stmt = $con->prepare($sql);
 $stmt->execute();
 $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -53,11 +62,11 @@ $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <?php
                                 if (isset($producto['image_2']) && $producto['image_2'] != ''):
                                     ?>
-                                <div class="et_pb_animation_left et-animated mb-4">
-                                    <img class="img-fluid img-prod"
-                                         src="<?= ADMIN_URL . 'uploads/images/' . $producto['image_2'] ?>"
-                                         alt="<?= $producto['title'] ?>">
-                                </div>
+                                    <div class="et_pb_animation_left et-animated mb-4">
+                                        <img class="img-fluid img-prod"
+                                             src="<?= ADMIN_URL . 'uploads/images/' . $producto['image_2'] ?>"
+                                             alt="<?= $producto['title'] ?>">
+                                    </div>
 
 
                                 <?php
@@ -66,11 +75,11 @@ $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <?php
                                 if (isset($producto['image_3']) && $producto['image_3'] != ''):
                                     ?>
-                                <div class="et_pb_animation_left et-animated mb-4">
-                                    <img class="img-fluid img-prod"
-                                         src="<?= ADMIN_URL . 'uploads/images/' . $producto['image_3'] ?>"
-                                         alt="<?= $producto['title'] ?>">
-                                </div>
+                                    <div class="et_pb_animation_left et-animated mb-4">
+                                        <img class="img-fluid img-prod"
+                                             src="<?= ADMIN_URL . 'uploads/images/' . $producto['image_3'] ?>"
+                                             alt="<?= $producto['title'] ?>">
+                                    </div>
 
 
                                 <?php
@@ -84,14 +93,14 @@ $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                 </article>
                 <aside class="col-sm-2 px-0">
-                    <h5>Categorías</h5>
+                    <h5><?= $slugTipo === 'categoria' ? 'Categorías' : 'Mercados'?></h5>
                     <ul class="nav flex-column categoria-list">
                         <?php
                         foreach ($categoriaList as $categoria):
                             ?>
                             <li class="nav-item my-1">
-                                <a class="nav-link <?= $categoria['slug'] == $slugCategoria ? 'active' : '' ?>"
-                                   href="<?= APP_URL . 'productos/' . $categoria['slug'] ?>"><?= $categoria['name'] ?>
+                                <a class="nav-link <?= $categoria['slug'] == $slugDescripcion ? 'active' : '' ?>"
+                                   href="<?= APP_URL . 'productos/' . $slugTipo . '/' . $categoria['slug'] ?>"><?= $categoria['name'] ?>
                                     (<?= $categoria['productsNumber'] ?>)</a>
                             </li>
                         <?php
