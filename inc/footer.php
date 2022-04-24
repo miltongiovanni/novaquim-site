@@ -36,6 +36,7 @@ $configuration = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
                 <ul class="flex-column navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="<?= $configuration['facebook_url']?>"><img class="social-logo" src="/img/facebook.png" alt="facebook">Facebook</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= $configuration['twitter_url']?>"><img  class="social-logo" src="/img/twitter.png" alt="twitter">Twitter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= $configuration['instagram_url']?>"><img  class="social-logo" src="/img/instagram.png" alt="twitter">Instagram</a></li>
                     <li class="nav-item py-2"><img class="social-logo" src="/img/whatsapp.png" alt="twitter"><?= $configuration['celular_1']?></li>
                 </ul>
             </div>

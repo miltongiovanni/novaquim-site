@@ -34,7 +34,8 @@ include_once('../inc/config_db.php');
             </div>
             <div class="row align-items-center">
                 <div class="col-sm-3 text-center">
-                    <img class="img-fluid et_pb_animation_left et-animated" src="/img/logoCompleto.png" alt="Industrias Novaquim S.A.S.">
+                    <img class="img-fluid et_pb_animation_left et-animated" src="/img/logoCompleto.png"
+                         alt="Industrias Novaquim S.A.S.">
                 </div>
                 <div class="col-sm-9">
                     <h5>
@@ -62,14 +63,16 @@ include_once('../inc/config_db.php');
             </div>
             <div class="row align-items-center">
                 <div class="col-sm-3 text-center">
-                    <img class="img-fluid et_pb_animation_left et-animated" src="/img/vision.png" alt="Vision Industrias Novaquim S.A.S.">
+                    <img class="img-fluid et_pb_animation_left et-animated" src="/img/vision.png"
+                         alt="Vision Industrias Novaquim S.A.S.">
                 </div>
                 <div class="col-sm-9">
                     <h5>
-                        Para el año 2021, queremos ser una empresa reconocida en el mercado local por la elaboración y
-                        comercialización de productos de Higiene y Limpieza de calidad y la aplicación de innovación
-                        permitiendo tener un portafolio de productos especializados para satisfacer las necesidades de
-                        cada cliente.
+                        Para el año 2024 Seremos, una empresa que cautiva a sus clientes con la calidad de sus
+                        productos, asistencia técnica y excelente servicio, brindando soluciones a la medida de sus
+                        necesidades en limpieza, cuidado e higiene en el hogar, instituciones e industrias en
+                        Bogotá y sus alrededores.
+
                     </h5>
 
                 </div>
@@ -85,15 +88,15 @@ include_once('../inc/config_db.php');
             </div>
             <div class="row align-items-center">
                 <div class="col-sm-3 text-center">
-                    <img class="img-fluid et_pb_animation_left et-animated" src="/img/mision.png" alt="Mision Industrias Novaquim S.A.S.">
+                    <img class="img-fluid et_pb_animation_left et-animated" src="/img/mision.png"
+                         alt="Mision Industrias Novaquim S.A.S.">
                 </div>
                 <div class="col-sm-9">
                     <h5>
-                        Industrias Novaquim S.A.S aplica el conocimiento, talento humano y tecnología en la elaboración
-                        y comercialización de productos de Higiene y Limpieza creando soluciones que satisfacen las
-                        expectativas de nuestros clientes a través de la innovación y el mejoramiento continuo de los
-                        procesos productivos, la investigación y el desarrollo de productos amigables con el medio
-                        ambiente con la más alta calidad, buscando crecimiento y rentabilidad.
+                        Somos una Industria Colombiana comprometida con el desarrollo, fabricación y comercialización de
+                        productos de aseo, ofreciendo a nuestros clientes soluciones que satisfacen sus expectativas a
+                        nivel de limpieza, cuidado e higiene en el hogar, instituciones e industrias, en la ciudad de
+                        Bogotá.
                     </h5>
 
                 </div>
@@ -109,27 +112,27 @@ include_once('../inc/config_db.php');
             </div>
             <div class="row align-items-center">
                 <div class="col-sm-3 text-center">
-                    <img class="img-fluid et_pb_animation_left et-animated" src="/img/valores.png" alt="Valores Industrias Novaquim S.A.S.">
+                    <img class="img-fluid et_pb_animation_left et-animated" src="/img/valores.png"
+                         alt="Valores Industrias Novaquim S.A.S.">
                 </div>
                 <div class="col-sm-9">
                     <ul class="h5">
-                        <li><strong>Respeto:</strong> Tratar humanamente a las personas valorando sus opiniones,
-                            creencias, estilos de vida y autonomía.
+                        <li><strong>Respeto:</strong> Reconocemos, aceptamos y apreciamos el valor de todas y cada una
+                            de las personas integrantes de la organización y la importancia de su aporte en el
+                            desarrollo organizacional.
                         </li>
-                        <li><strong>Responsabilidad:</strong> Cumplir con los compromisos y obligaciones adquiridas
-                            dando respuestas adecuadas y oportunas preservando el medio ambiente.
+                        <li><strong>Responsabilidad:</strong> Somos conscientes y respondemos por las consecuencias de
+                            nuestros actos y el impacto que se podría generar en la organización y/o sus partes
+                            interesadas.
                         </li>
-                        <li><strong>Calidad:</strong> Enfocar productos y procesos acordes a las mejores prácticas y
-                            estándares cumpliendo las expectativas del cliente.
+                        <li><strong>Integridad::</strong> Actuamos de manera honesta, recta y con un enfoque ético, en
+                            busca del crecimiento organizacional.
                         </li>
-                        <li><strong>Confianza:</strong> Generar pertenencia de todos los empleados y clientes generando
-                            lealtad y aprecio a la organización.
+                        <li><strong>Confianza:</strong> Creemos en nuestro equipo de trabajo, clientes y proveedores,
+                            generando pertenencia, lealtad y aprecio por la organización.
                         </li>
-                        <li><strong>Honestidad:</strong> Actuar rectamente, lo que denota sinceridad y coherencia entre
-                            lo que se piensa, se dice y lo que se hace.
-                        </li>
-                        <li><strong>Trabajo en Equipo:</strong> Unión de esfuerzos para alcanzar una meta común
-                            aportando lo mejor de sus competencias.
+                        <li><strong>Trabajo en Equipo:</strong> Unimos esfuerzos para realizar proyectos, lograr
+                            objetivos, aportando lo mejor de nuestras competencias.
                         </li>
                     </ul>
 
@@ -140,13 +143,10 @@ include_once('../inc/config_db.php');
     </section>
     <section>
         <div class="container">
-
             <h5 class="text-center p-5">Para el año 2024, queremos seguir siendo una empresa reconocida en el mercado
-                local por la
-                elaboración y comercialización de productos de Higiene y Limpieza de calidad y la aplicación de
-                innovación permitiendo tener un portafolio de productos especializados para satisfacer las necesidades
-                de cada cliente.</h5>
-
+                local por la elaboración y comercialización de productos de Higiene y Limpieza de calidad y la
+                aplicación de innovación permitiendo tener un portafolio de productos especializados para satisfacer las
+                necesidades de cada cliente.</h5>
         </div>
     </section>
     <section>
