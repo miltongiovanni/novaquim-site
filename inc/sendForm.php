@@ -71,14 +71,14 @@ if ($GoToEmail === true) {
         $mail->isSMTP();                                    //Send using SMTP
         $mail->Host = 'mail.novaquim.com';                  //Set the SMTP server to send through
         $mail->SMTPAuth = true;                             //Enable SMTP authentication
-        $mail->Username = 'contacto@novaquim.com';          //SMTP username
-        $mail->Password = '1Jt7YgKaEFDj';                   //SMTP password
+        $mail->Username = EMAIL_USERNAME;                   //SMTP username
+        $mail->Password = EMAIL_PASSWORD;                   //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;    //Enable implicit TLS encryption
         $mail->Port = 465;                                  //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
         $mail->CharSet = 'UTF-8';
         $mail->Encoding = 'base64';
         //Recipients
-        $mail->setFrom('contacto@novaquim.com', 'Contacto Web Industrias Novaquim');
+        $mail->setFrom(EMAIL_USERNAME, 'Contacto Web Industrias Novaquim');
         $mail->addAddress($correo_contacto, 'Contacto Web');     //Add a recipient
         //$mail->addAddress('ellen@example.com');               //Name is optional
         $mail->addReplyTo($email_contacto, $nombre_contacto);
