@@ -96,10 +96,10 @@ if ($GoToEmail === true) {
             $stmt = $con->prepare($sql);
             $stmt->execute();
         }
-        echo $msg;
     } catch (Exception $e) {
         echo $e->errorMessage(); //Pretty error messages from PHPMailer
     }
 
 
+    die($msg);
 }

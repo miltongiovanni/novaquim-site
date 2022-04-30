@@ -1,5 +1,5 @@
 <h3 class="mb-3">Contáctenos</h3>
-<form action="/inc/sendForm.php" class="row g-3 needs-validation" method="post" id="contact_form" novalidate>
+<form class="row g-3 needs-validation" id="contact_form" novalidate>
     <div class="col-md-6">
         <label for="nombre_contacto" class="form-label">Nombre</label>
         <input type="text" class="form-control" id="nombre_contacto" name="nombre_contacto" value="" required>
@@ -79,7 +79,14 @@
         <button class="btn btn-primary" type="submit">Enviar</button>
     </div>
 </form>
+<button class="btn btn-primary" type="button" disabled id="processing" style="display: none">
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    Enviando el correo
+</button>
+<div id="respuesta-email" style="display: none" >
+    <p>Su mensaje a ha sido enviado con éxito, uno de nuestros agentes se contactará con usted en los próximos días</p>
 
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="politicaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -100,43 +107,34 @@
     </div>
 </div>
 <script>
-    /*function onSubmit(token) {
-        document.getElementById("demo-form").submit();
-    }*/
-
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-        'use strict'
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation')
-
-        grecaptcha.ready(function () {
-            grecaptcha.execute('<?=$configuration['google_recaptcha_site_key']?>', {action: 'submit'}).then(function (token) {
-                // Add your logic to submit to your backend server here.
-                document.getElementById("g-recaptcha-response").value = token;
-            });
-        });
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-
-
-
-                    /*const XHR = new XMLHttpRequest();
+    var form = document.getElementById('contact_form');
+    form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }else{
+            event.preventDefault();
+            form.classList.add('was-validated');
+            document.getElementById('contact_form').style.display= 'none';
+            document.getElementById('processing').style.display= 'block';
+            grecaptcha.ready(function () {
+                grecaptcha.execute('<?=$configuration['google_recaptcha_site_key']?>', {action: 'submit'}).then(function (token) {
+                    // Add your logic to submit to your backend server here.
+                    document.getElementById("g-recaptcha-response").value = token;
+                    const XHR = new XMLHttpRequest();
 
                     // Bind the FormData object and the form element
-                    const FD = new FormData( forms[0] );
+                    const FD = new FormData( form );
 
-                    // Define what happens on successful data submission
-                    XHR.addEventListener( "load", function(event) {
-                        console.log( event.target.responseText );
-                    } );
+                    // Defining event listener for readystatechange event
+                    XHR.onreadystatechange = function(aEvt) {
+                        // Check if the request is compete and was successful
+                        if(XHR.readyState === 4 && XHR.status === 200) {
+                            // Inserting the response from server into an HTML element
+                            document.getElementById('processing').style.display= 'none';
+                            document.getElementById('respuesta-email').style.display= 'block';
+                        }
+                    };
 
                     // Define what happens in case of error
                     XHR.addEventListener( "error", function( event ) {
@@ -144,13 +142,13 @@
                     } );
 
                     // Set up our request
-                    XHR.open( "POST", "/inc/sendForm.php" );
+                    XHR.open( "POST", "/inc/sendForm.php", true );
 
                     // The data sent is what the user provided in the form
-                    XHR.send( FD );*/
-                    form.classList.add('was-validated');
-                }, false)
-            })
-    })()
+                    XHR.send( FD );
+                });
+            });
+        }
+    }, false);
 
 </script>
