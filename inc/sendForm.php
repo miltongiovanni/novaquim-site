@@ -91,8 +91,8 @@ if ($GoToEmail === true) {
             $msg .= 'Mailer Error: ' . $mail->ErrorInfo;
         } else {
             $msg .= 'Message sent!';
-            $sql = "INSERT INTO contacto (nombre_contacto, organizacion, email_contacto, telefono, celular, tipo_consulta, mensaje, acepta_politica)
-                    VALUES ('$nombre_contacto', '$organizacion', '$email_contacto', $telefono, $celular, '$tipo_consulta', '$mensaje', $acepta_politica)";
+            $sql = "INSERT INTO contacto (nombre_contacto, organizacion, email_contacto, telefono, celular, tipo_consulta, mensaje, acepta_politica, fecha_contacto)
+                    VALUES ('$nombre_contacto', '$organizacion', '$email_contacto', $telefono, $celular, '$tipo_consulta', '$mensaje', $acepta_politica, NOW())";
             $stmt = $con->prepare($sql);
             $stmt->execute();
         }
