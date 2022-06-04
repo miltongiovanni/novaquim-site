@@ -34,7 +34,7 @@ foreach ($mercadosMenu as $key => $mercado) {
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="main_nav">
-                <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                <ul class="navbar-nav flex-wrap ms-md-auto">
                     <li class="nav-item active"><a class="nav-link" href="<?= APP_URL ?>">Inicio </a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= APP_URL ?>quienes-somos"> Quiénes somos </a></li>
                     <li class="nav-item dropdown has-megamenu">
