@@ -9,7 +9,7 @@ include_once('../inc/config_db.php');
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/img/favicon.ico" type="image/ico" sizes="16x16">
-    <title>Quienes Somos | Industrias Novaquim S.A.S. Productos de aseo a la medida de sus necesidades</title>
+    <title>Quiénes Somos | Industrias Novaquim S.A.S. Productos de aseo a la medida de sus necesidades</title>
     <?php include('../inc/assets.php') ?>
 
 </head>
