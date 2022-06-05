@@ -16,11 +16,9 @@ $distribuidores = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Distribuidores | Industrias Novaquim S.A.S. Productos de aseo a la medida de sus necesidades</title>
     <?php include('../inc/assets.php') ?>
     <script type="text/javascript">
-        var distribuidores = <?php echo json_encode($distribuidores ); ?>;
+        var distribuidores = <?= json_encode($distribuidores ); ?>;
     </script>
-
     <script type="module" src="/js/map.js"></script>
-
 
 </head>
 
@@ -41,6 +39,34 @@ $distribuidores = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div class="col-sm-5">
                     <hr/>
                 </div>
+                <table class="table mt-3" id="distibuidoresTable">
+                    <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Distribuidor</th>
+                        <th scope="col" class="d-none d-md-block">Contacto</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Celular</th>
+                        <th scope="col" class="d-none d-lg-block">Dirección</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    foreach ($distribuidores as $distribuidor):
+                    ?>
+                    <tr>
+                        <th scope="row"><?=$distribuidor['id']?></th>
+                        <td><?=$distribuidor['distribuidor']?></td>
+                        <td class="d-none d-md-block"><?=$distribuidor['contacto']?></td>
+                        <td><?=$distribuidor['telefono']?></td>
+                        <td><?=$distribuidor['celular']?></td>
+                        <td class="d-none d-lg-block"><?=$distribuidor['direccion']?></td>
+                    </tr>
+                    <?php
+                    endforeach;
+                    ?>
+                    </tbody>
+                </table>
             </div>
 
             <!--The div element for the map -->

@@ -24,20 +24,20 @@ include_once('../inc/config_db.php');
         <div class="container">
 
             <div class="row my-5">
-                <div class="col-sm-5">
+                <div class="col-sm-3 col-md-4 col-xxl-5 d-none d-sm-block">
                     <hr/>
                 </div>
-                <div class="col-sm-2"><h4>QUIÉNES SOMOS</h4></div>
-                <div class="col-sm-5">
+                <div class="col-sm-6 col-md-4 col-xxl-2 text-center"><h4>QUIÉNES SOMOS</h4></div>
+                <div class="col-sm-3 col-md-4 col-xxl-5 d-none d-sm-block">
                     <hr/>
                 </div>
             </div>
             <div class="row align-items-center">
-                <div class="col-sm-3 text-center">
+                <div class="d-none d-lg-block col-lg-4 col-xxl-3 text-center">
                     <img class="img-fluid et_pb_animation_left et-animated" src="/img/logoCompleto.png"
                          alt="Industrias Novaquim S.A.S.">
                 </div>
-                <div class="col-sm-9">
+                <div class="col-sm-12 col-lg-8 col-xxl-9">
                     <h5>
                         Industrias Novaquim S.A.S. es una empresa dinámica con grandes ideales, fuertes principios,
                         inmenso potencial y talento humano para brindar productos que superen las expectativas de
@@ -53,20 +53,20 @@ include_once('../inc/config_db.php');
             </div>
 
             <div class="row my-5">
-                <div class="col-sm-5">
+                <div class="col-sm-3 col-md-4 col-xxl-5 d-none d-sm-block">
                     <hr/>
                 </div>
-                <div class="col-sm-2"><h4>VISIÓN</h4></div>
-                <div class="col-sm-5">
+                <div class="col-sm-6 col-md-4 col-xxl-2 text-center"><h4>VISIÓN</h4></div>
+                <div class="col-sm-3 col-md-4 col-xxl-5 d-none d-sm-block">
                     <hr/>
                 </div>
             </div>
             <div class="row align-items-center">
-                <div class="col-sm-3 text-center">
+                <div class="d-none d-lg-block col-lg-4 col-xxl-3 text-center">
                     <img class="img-fluid et_pb_animation_left et-animated" src="/img/vision.png"
                          alt="Vision Industrias Novaquim S.A.S.">
                 </div>
-                <div class="col-sm-9">
+                <div class="col-sm-12 col-lg-8 col-xxl-9">
                     <h5>
                         Para el año 2024 Seremos, una empresa que cautiva a sus clientes con la calidad de sus
                         productos, asistencia técnica y excelente servicio, brindando soluciones a la medida de sus
@@ -78,20 +78,20 @@ include_once('../inc/config_db.php');
                 </div>
             </div>
             <div class="row my-5">
-                <div class="col-sm-5">
+                <div class="col-sm-3 col-md-4 col-xxl-5 d-none d-sm-block">
                     <hr/>
                 </div>
-                <div class="col-sm-2"><h4>MISIÓN</h4></div>
-                <div class="col-sm-5">
+                <div class="col-sm-6 col-md-4 col-xxl-2 text-center"><h4>MISIÓN</h4></div>
+                <div class="col-sm-3 col-md-4 col-xxl-5 d-none d-sm-block">
                     <hr/>
                 </div>
             </div>
             <div class="row align-items-center">
-                <div class="col-sm-3 text-center">
+                <div class="d-none d-lg-block col-lg-4 col-xxl-3 text-center">
                     <img class="img-fluid et_pb_animation_left et-animated" src="/img/mision.png"
                          alt="Mision Industrias Novaquim S.A.S.">
                 </div>
-                <div class="col-sm-9">
+                <div class="col-sm-12 col-lg-8 col-xxl-9">
                     <h5>
                         Somos una Industria Colombiana comprometida con el desarrollo, fabricación y comercialización de
                         productos de aseo, ofreciendo a nuestros clientes soluciones que satisfacen sus expectativas a
@@ -102,20 +102,20 @@ include_once('../inc/config_db.php');
                 </div>
             </div>
             <div class="row my-5">
-                <div class="col-sm-5">
+                <div class="col-sm-3 col-md-4 col-xxl-5 d-none d-sm-block">
                     <hr/>
                 </div>
-                <div class="col-sm-2"><h4>VALORES</h4></div>
-                <div class="col-sm-5">
+                <div class="col-sm-6 col-md-4 col-xxl-2 text-center"><h4>VALORES</h4></div>
+                <div class="col-sm-3 col-md-4 col-xxl-5 d-none d-sm-block">
                     <hr/>
                 </div>
             </div>
             <div class="row align-items-center">
-                <div class="col-sm-3 text-center">
+                <div class="d-none d-lg-block col-lg-4 col-xxl-3 text-center">
                     <img class="img-fluid et_pb_animation_left et-animated" src="/img/valores.png"
                          alt="Valores Industrias Novaquim S.A.S.">
                 </div>
-                <div class="col-sm-9">
+                <div class="col-sm-12 col-lg-8 col-xxl-9">
                     <ul class="h5">
                         <li><strong>Respeto:</strong> Reconocemos, aceptamos y apreciamos el valor de todas y cada una
                             de las personas integrantes de la organización y la importancia de su aporte en el
@@ -141,19 +141,11 @@ include_once('../inc/config_db.php');
 
         </div>
     </section>
-    <section>
-        <div class="container">
-            <h5 class="text-center p-5">Para el año 2024, queremos seguir siendo una empresa reconocida en el mercado
-                local por la elaboración y comercialización de productos de Higiene y Limpieza de calidad y la
-                aplicación de innovación permitiendo tener un portafolio de productos especializados para satisfacer las
-                necesidades de cada cliente.</h5>
-        </div>
-    </section>
-    <section>
+    <section class="my-5">
         <div class="container">
 
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-xl-3">
                     <h3><span style="color: #000080;">UBICACIÓN</span></h3>
                     <p><strong>Dirección:</strong></p>
                     <p>Calle 35 C Sur No. 26 F - 40</p>
@@ -165,7 +157,7 @@ include_once('../inc/config_db.php');
                     <p><strong>Email:</strong></p>
                     <p><a href="mailto:info@novaquim.com?target=">info@novaquim.com</a></p>
                 </div>
-                <div class="col-sm-9">
+                <div class="col-xl-9">
                     <iframe width="100%" height="450"
                             src="https://embed.waze.com/es/iframe?zoom=17&lat=4.587338722815989&lon=-74.12103295326234&pin=1"></iframe>
                 </div>
