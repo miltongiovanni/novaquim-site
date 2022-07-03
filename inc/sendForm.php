@@ -79,10 +79,10 @@ if ($GoToEmail === true) {
         $mail->Encoding = 'base64';
         //Recipients
         $mail->setFrom(EMAIL_USERNAME, 'Contacto Web Industrias Novaquim');
-        $mail->addAddress($correo_contacto, 'Contacto Web');     //Add a recipient
+        $mail->addAddress(EMAIL_NOVAQUIM, 'Contacto Web');     //Add a recipient
         //$mail->addAddress('ellen@example.com');               //Name is optional
         $mail->addReplyTo($email_contacto, $nombre_contacto);
-        //$mail->addCC('cc@example.com');
+        $mail->addCC(CC_EMAIL_NOVAQUIM);
         $mail->msgHTML($email_body);
 
 
