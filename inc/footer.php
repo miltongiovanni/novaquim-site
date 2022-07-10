@@ -50,3 +50,5 @@ $configuration = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
             <div id="footer-info" class="text-muted">Diseñado por Industrias Novaquim S.A.S. © <?= date("Y") ?></div>
     </div>
 </footer>
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-5b2e14fd-a845-4f27-9c88-c34d7e2c5ea5"></div>
