@@ -191,13 +191,13 @@
     Datos Personales. En todo caso, el receptor se sujetará a los lineamientos de esta Política.</p><h4>
     4.5. ÁREA Y PERSONA ENCARGADA DEL HABEAS DATA</h4>
 <p>En <strong>Industrias Novaquim S.A.S., </strong><strong> </strong>el área de habeas data estará a
-    cargo de <a href="info@novaquim.com">Info@novaquim.com</a>, quien se encargará de atender cualquier
+    cargo de <a href="mailto:info@novaquim.com">Info@novaquim.com</a>, quien se encargará de atender cualquier
     consulta o reclamo de los Titulares o los Autorizados. Estas consultas o reclamos se podrán dirigir
     a:</p>
 <ul>
     <li>Nombre de la Compañía <strong>Industrias Novaquim S.A.S. </strong><strong> </strong></li>
     <li>Nombre de la persona encargada info@novaquim.com</li>
-    <li>Correo electrónico <a href="info@novaquim.com">info@novaquim.com</a></li>
+    <li>Correo electrónico <a href="mailto:info@novaquim.com">info@novaquim.com</a></li>
     <li>Teléfonos: (571) 203 94 84 – 202 29 12</li>
     <li>Dirección : Calle 35 C sur No. 26 F- 40, Bogotá</li>
 </ul>
