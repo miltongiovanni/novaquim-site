@@ -1,7 +1,6 @@
 <?php
 $slugTipo = $_GET['tipo'];
 $slugDescripcion = $_GET['descripcion'];
-var_dump($slugTipo);
 include_once('inc/config_db.php');
 if ($slugTipo === 'categoria'){
     $sql = "SELECT p.id, p.category_id, p.title, p.meta_title, p.meta_description, p.image_1, p.description, p.slug, c.id, c.name, c.slug

@@ -2,5 +2,5 @@
 RewriteEngine On
 # RewriteBase /
 
-RewriteRule ^productos/(.*)/(.*)/(.*)/$ producto.php?tipo=$1&descripcion=$2&producto=$3 [L]
 RewriteRule ^productos/(.*)/(.*)/$ categoria.php?tipo=$1&descripcion=$2 [L]
+RewriteRule ^productos/(.*)/$ producto.php?&producto=$1 [L]
