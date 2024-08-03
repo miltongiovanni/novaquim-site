@@ -33,8 +33,8 @@ foreach ($mercadosMenu as $key => $mercado) {
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse " id="main_nav">
-                <ul class="navbar-nav flex-wrap ms-md-auto">
+            <div class="collapse navbar-collapse justify-content-center" id="main_nav">
+                <ul class="navbar-nav flex-wrap">
                     <li class="nav-item active"><a class="nav-link" href="<?= APP_URL ?>">Inicio </a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= APP_URL ?>quienes-somos/"> Quiénes somos </a></li>
                     <li class="nav-item dropdown has-megamenu">
@@ -46,14 +46,14 @@ foreach ($mercadosMenu as $key => $mercado) {
                                     ?>
                                     <div class="col-megamenu col-md-2">
                                         <h6 class="title fw-bold"><a class="nav-link"
-                                                             href="<?= APP_URL .'productos/categoria/'. $categoria['slug'] ?>"><?= $categoria['name'] ?></a>
+                                                             href="<?= APP_URL .'productos/categoria/'. $categoria['slug'] . '/'?>"><?= $categoria['name'] ?></a>
                                         </h6>
                                         <ul class="list-unstyled">
                                             <?php
                                                 foreach ($categoria['productos'] as $productoMenu):
                                                     ?>
                                                     <li class="ps-2"><a class="nav-link"
-                                                           href="<?= APP_URL .'productos/categoria/'. $categoria['slug'] . '/' . $productoMenu['slug']. '/' ?>"><?= $productoMenu['title'] ?></a>
+                                                           href="<?= APP_URL .'productos/' . $productoMenu['slug']. '/' ?>"><?= $productoMenu['title'] ?></a>
                                                     </li>
                                                 <?php
                                                 endforeach;
@@ -82,7 +82,7 @@ foreach ($mercadosMenu as $key => $mercado) {
                                                 foreach ($mercado['productos'] as $productoMenu):
                                                     ?>
                                                     <li class="ps-2"><a class="nav-link"
-                                                           href="<?= APP_URL .'productos/mercado/'. $mercado['slug'] . '/' . $productoMenu['slug']. '/' ?>"><?= $productoMenu['title'] ?></a>
+                                                           href="<?= APP_URL .'productos/' . $productoMenu['slug']. '/' ?>"><?= $productoMenu['title'] ?></a>
                                                     </li>
                                                 <?php
                                                 endforeach;
@@ -99,10 +99,10 @@ foreach ($mercadosMenu as $key => $mercado) {
                     <li class="nav-item"><a class="nav-link" href="<?= APP_URL?>distribuidores/"> Distribuidores </a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= APP_URL?>contacto/"> Contacto </a></li>
                 </ul>
-                <form class="d-flex">
+                <!--<form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
-                </form>
+                </form>-->
             </div> <!-- navbar-collapse.// -->
         </div> <!-- container-fluid.// -->
     </nav>

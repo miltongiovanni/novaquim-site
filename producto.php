@@ -1,7 +1,7 @@
 <?php
-$slugTipo = $_GET['tipo'];
+
 $slugProducto = $_GET['producto'];
-$slugDescripcion = $_GET['descripcion'];
+
 include_once('inc/config_db.php');
 $sql = "SELECT title, meta_title, meta_description, image_1, image_2, image_3, `description`, slug
         FROM product p
@@ -9,21 +9,40 @@ $sql = "SELECT title, meta_title, meta_description, image_1, image_2, image_3, `
 $stmt = $con->prepare($sql);
 $stmt->execute(array('slugProducto' => $slugProducto));
 $producto = $stmt->fetch(PDO::FETCH_ASSOC);
-if ($slugTipo === 'categoria') {
-    $sql = "SELECT c.id, c.name, c.slug, count(p.id) productsNumber
+
+$sqlCat = "SELECT c.slug FROM product p
+            LEFT JOIN category c ON p.category_id = c.id
+            WHERE p.slug =:slugProducto";
+$stmt = $con->prepare($sqlCat);
+$stmt->execute(array('slugProducto' => $slugProducto));
+$categoriaProd = $stmt->fetch(PDO::FETCH_ASSOC);
+$categoriaSlug = $categoriaProd['slug'];
+
+$sqlMer = "SELECT m.slug FROM product p
+        LEFT JOIN mercado m ON p.mercado_id = m.id
+        WHERE p.slug =:slugProducto";
+$stmt = $con->prepare($sqlMer);
+$stmt->execute(array('slugProducto' => $slugProducto));
+$mercadoProd = $stmt->fetch(PDO::FETCH_ASSOC);
+$mercadoSlug = $mercadoProd['slug'];
+
+$sqlCategorias = "SELECT c.id, c.name, c.slug, count(p.id) productsNumber
         FROM category c
         LEFT JOIN product p on c.id = p.category_id
         GROUP BY c.id";
-} elseif ($slugTipo === 'mercado') {
-    $sql = "SELECT m.id, m.name, m.slug, count(p.id) productsNumber
+
+$stmt = $con->prepare($sqlCategorias);
+$stmt->execute();
+$categoriasList = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$sqlMercados = "SELECT m.id, m.name, m.slug, count(p.id) productsNumber
         FROM mercado m
         LEFT JOIN product p on m.id = p.mercado_id
         GROUP BY m.id";
-}
 
-$stmt = $con->prepare($sql);
+$stmt = $con->prepare($sqlMercados);
 $stmt->execute();
-$categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$mercadosList = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -93,14 +112,30 @@ $categoriaList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                 </article>
                 <aside class="col-sm-2 px-0">
-                    <h5><?= $slugTipo === 'categoria' ? 'Categorías' : 'Mercados'?></h5>
+                    <h5>Categorías</h5>
                     <ul class="nav flex-column categoria-list">
                         <?php
-                        foreach ($categoriaList as $categoria):
+                        foreach ($categoriasList as $categoria):
                             ?>
                             <li class="nav-item my-1">
-                                <a class="nav-link <?= $categoria['slug'] == $slugDescripcion ? 'active' : '' ?>"
-                                   href="<?= APP_URL . 'productos/' . $slugTipo . '/' . $categoria['slug'] ?>"><?= $categoria['name'] ?>
+                                <a class="nav-link <?= $categoria['slug'] == $categoriaSlug ? 'active' : '' ?>"
+                                   href="<?= APP_URL . 'productos/categoria/' . $categoria['slug'] . '/' ?>"><?= $categoria['name'] ?>
+                                    (<?= $categoria['productsNumber'] ?>)</a>
+                            </li>
+                        <?php
+                        endforeach;
+                        ?>
+
+
+                    </ul>
+                    <h5 class="mt-4">Mercados</h5>
+                    <ul class="nav flex-column categoria-list">
+                        <?php
+                        foreach ($mercadosList as $categoria):
+                            ?>
+                            <li class="nav-item my-1">
+                                <a class="nav-link <?= $categoria['slug'] == $mercadoSlug ? 'active' : '' ?>"
+                                   href="<?= APP_URL . 'productos/mercado/' . $categoria['slug'] . '/' ?>"><?= $categoria['name'] ?>
                                     (<?= $categoria['productsNumber'] ?>)</a>
                             </li>
                         <?php
