@@ -1,6 +1,8 @@
 ## REWRITE DEFAULTS
+
+ErrorDocument 404 /
 RewriteEngine On
 # RewriteBase /
+RewriteRule ^productos/(.*)/(.*)/ categoria.php?tipo=$1&descripcion=$2 [L]
 
-RewriteRule ^productos/(.*)/(.*)/$ categoria.php?tipo=$1&descripcion=$2 [L]
-RewriteRule ^productos/(.*)/$ producto.php?&producto=$1 [L]
+RewriteRule ^productos/(.*)/ producto.php?&producto=$1 [L]
