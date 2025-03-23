@@ -4,6 +4,15 @@ $sql = "SELECT id, title, subtitle, background_image, front_image FROM banner";
 $stmt = $con->prepare($sql);
 $stmt->execute();
 $banners = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$sqlMercados = "SELECT m.id, m.name, m.slug, count(p.id) productsNumber
+        FROM mercado m
+        LEFT JOIN product p on m.id = p.mercado_id
+        GROUP BY m.id";
+
+$stmt = $con->prepare($sqlMercados);
+$stmt->execute();
+$mercadosList = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -82,7 +91,7 @@ $banners = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         </div>
     </section>
-    <section>
+    <section class="mb-5">
         <div class="container">
 
             <div class="row">
@@ -104,6 +113,58 @@ $banners = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </div>
             </div>
 
+        </div>
+    </section>
+    <section class="mb-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-3 justify-content-center row-cols-xl-5 g-4">
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/img/hogar.jpg" class="card-img-top" alt="hogar y oficina">
+                        <div class="card-body text-center">
+                            <h6 class="card-title fw-bold">HOGAR Y OFICINA</h6>
+                            <a class="btn btn-outline-primary my-3" href="/productos/mercado/hogar-y-oficina/">Ver productos <small>(<?= $mercadosList[0]['productsNumber']?>)</small></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-bg-dark">
+                        <img src="/img/conjunto.jpg" class="card-img-top" alt="propiedad horizontal">
+                        <div class="card-body text-center">
+                            <h6 class="card-title fw-bold">PROPIEDAD HORIZONTAL</h6>
+                            <a class="btn btn-outline-primary my-3" href="/productos/mercado/propiedad-horizontal/">Ver productos <small>(<?= $mercadosList[1]['productsNumber']?>)</small></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="/img/distribucionweb.jpg" class="card-img-top" alt="Institucional">
+                        <div class="card-body text-center">
+                            <h6 class="card-title fw-bold">INSTITUCIONAL</h6>
+                            <a class="btn btn-outline-primary my-3" href="/productos/mercado/institucional/">Ver productos <small>(<?= $mercadosList[2]['productsNumber']?>)</small></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="/img/carro.jpg" class="card-img-top" alt="Automotriz">
+                        <div class="card-body text-center">
+                            <h6 class="card-title fw-bold">AUTOMOTRIZ</h6>
+                            <a class="btn btn-outline-primary my-3" href="/productos/mercado/automotriz/">Ver productos <small>(<?= $mercadosList[3]['productsNumber']?>)</small></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="/img/planta.jpg" class="card-img-top" alt="Industrial">
+                        <div class="card-body text-center">
+                            <h6 class="card-title fw-bold">INDUSTRIAL</h6>
+                            <a class="btn btn-outline-primary my-3" href="/productos/mercado/industrial/">Ver productos <small>(<?= $mercadosList[4]['productsNumber']?>)</small></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

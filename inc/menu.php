@@ -97,6 +97,7 @@ foreach ($mercadosMenu as $key => $mercado) {
                     </li>
                     <li class="nav-item"><a class="nav-link" href="<?= APP_URL?>servicios/"> Servicios </a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= APP_URL?>distribuidores/"> Distribuidores </a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= APP_URL?>formas-de-pago/"> Formas de pago </a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= APP_URL?>contacto/"> Contacto </a></li>
                 </ul>
                 <!--<form class="d-flex">
