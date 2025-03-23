@@ -79,8 +79,9 @@ $distribuidores = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </div>
 <?php include '../inc/footer.php' ?>
 <script src="../js/script.js"></script>
+
 <script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0Xve7mmgRVjfFSmHrCIB1qdu1nKYR3jA&region=CO&language=es&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvGI1XJX1Tvvl1MBIXot5794GyOuS1nDs&region=CO&language=es&callback=initMap">
 </script>
 
 </body>

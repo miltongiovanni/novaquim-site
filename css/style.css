@@ -55,6 +55,24 @@
         transform: translateX(0);
     }
 }
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #030353 !important;
+    border-color: #030353 !important;
+}
+.btn-outline-primary {
+    color: #030353 !important;
+    border-color: #030353 !important;
+}
+
+.btn-outline-primary:hover {
+    color: #fff !important;
+    background-color: #030353;
+    border-color: #030353;
+}
 .et_pb_animation_left.et-animated {
     opacity: 1;
     -webkit-animation: fadeLeft 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
