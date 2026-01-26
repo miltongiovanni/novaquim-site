@@ -14,15 +14,16 @@ $stmt = $con->prepare($sql);
 $stmt->execute();
 $configuration = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
 $recaptcha = $_POST['g-recaptcha-response'];
-$recaptcha_secret = $configuration['google_recaptcha_secret_key'];
+$recaptcha_site_key = $configuration['google_recaptcha_site_key'];
+$google_api_key = $configuration['google_api_key'];
+$projectId = $configuration['projectId'];
 $correo_contacto = $configuration['correo_contacto'];
-
 require('recaptcha.php');
 
 $GoToEmail = false;
 
 if (isset($recaptcha) && $recaptcha) {
-    $GoToEmail = validate_rechapcha($recaptcha, $recaptcha_secret);
+    $GoToEmail = validate_rechapcha($recaptcha, $recaptcha_site_key, $google_api_key, $projectId );
 }
 $email_contacto = $_POST['email_contacto'];
 $organizacion = $_POST['organizacion'];

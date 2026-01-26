@@ -83,7 +83,7 @@
     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
     Enviando el correo
 </button>
-<div id="respuesta-email" style="display: none" >
+<div id="respuesta-email" style="display: none">
     <p>Su mensaje a ha sido enviado con éxito, uno de nuestros agentes se contactará con usted en los próximos días</p>
 
 </div>
@@ -112,42 +112,47 @@
         if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
-        }else{
+            form.classList.add('was-validated');
+        } else {
             event.preventDefault();
             form.classList.add('was-validated');
-            document.getElementById('contact_form').style.display= 'none';
-            document.getElementById('processing').style.display= 'block';
-            grecaptcha.ready(function () {
-                grecaptcha.execute('<?=$configuration['google_recaptcha_site_key']?>', {action: 'submit'}).then(function (token) {
+            document.getElementById('contact_form').style.display = 'none';
+            document.getElementById('processing').style.display = 'block';
+            grecaptcha.enterprise.ready(() => {
+                grecaptcha.enterprise.execute(
+                    '<?=$configuration['google_recaptcha_site_key']?>',
+                    {action: 'contact_form'}
+                ).then(token => {
                     // Add your logic to submit to your backend server here.
                     document.getElementById("g-recaptcha-response").value = token;
                     const XHR = new XMLHttpRequest();
 
                     // Bind the FormData object and the form element
-                    const FD = new FormData( form );
+                    const FD = new FormData(form);
 
                     // Defining event listener for readystatechange event
-                    XHR.onreadystatechange = function(aEvt) {
+                    XHR.onreadystatechange = function (aEvt) {
                         // Check if the request is compete and was successful
-                        if(XHR.readyState === 4 && XHR.status === 200) {
+                        if (XHR.readyState === 4 && XHR.status === 200) {
                             // Inserting the response from server into an HTML element
-                            document.getElementById('processing').style.display= 'none';
-                            document.getElementById('respuesta-email').style.display= 'block';
+                            document.getElementById('processing').style.display = 'none';
+                            document.getElementById('respuesta-email').style.display = 'block';
                         }
                     };
 
                     // Define what happens in case of error
-                    XHR.addEventListener( "error", function( event ) {
-                        alert( 'Oops! Something went wrong.' );
-                    } );
+                    XHR.addEventListener("error", function (event) {
+                        alert('Oops! Something went wrong.');
+                    });
 
                     // Set up our request
-                    XHR.open( "POST", "/inc/sendForm.php", true );
+                    XHR.open("POST", "/inc/sendForm.php", true);
 
                     // The data sent is what the user provided in the form
-                    XHR.send( FD );
+                    XHR.send(FD);
                 });
             });
+
         }
     }, false);
 
