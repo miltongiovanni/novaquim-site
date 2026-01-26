@@ -15,8 +15,7 @@ $configuration = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
     <link rel="icon" href="/img/favicon.ico" type="image/ico" sizes="16x16">
     <title>Contacto | Industrias Novaquim S.A.S. Productos de aseo a la medida de sus necesidades</title>
     <?php include('../inc/assets.php') ?>
-    <script src="https://www.google.com/recaptcha/api.js?hl=es&render=<?=$configuration['google_recaptcha_site_key']?>"></script>
-
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=<?=$configuration['google_recaptcha_site_key']?>"></script>
 
 </head>
 
